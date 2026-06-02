@@ -1,7 +1,7 @@
 /* ===== ROOT VARIABLES ===== */
 :root {
-    --primary-color: #06b6d4;
-    --secondary-color: #10b981;
+    --primary-color: #bcc736;
+    --secondary-color: #b91010;
     --accent-color: #06b6d4;
     --dark-bg: #0f172a;
     --light-bg: #1e293b;
@@ -174,7 +174,6 @@ p {
     border-radius: 8px;
     color: white;
 }
-
 .nav-menu {
     display: flex;
     list-style: none;
