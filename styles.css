@@ -730,6 +730,15 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+
+}
+
+@media (max-width: 768px) {
+    .project-card.featured {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+    }
 }
 
 .project-card:hover {
@@ -820,6 +829,7 @@ p {
     flex-wrap: wrap;
     gap: 0.7rem;
     padding: 0 2rem;
+    padding-top: 1.5rem;
 }
 
 .tech {
