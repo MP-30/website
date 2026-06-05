@@ -878,6 +878,7 @@ p {
     color: var(--primary-color);
     font-size: 0.9rem;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .meta-item i {
