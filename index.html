@@ -12,9 +12,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Bhadauriya - DevOps & Backend Engineer</title>
+    <title>Aditya Bhadauriya | Python AI & Backend Engineer</title>
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="styles.css?v=20261117">
+    <link rel="stylesheet" href="styles.css?v=20261117-3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 </head>
@@ -36,18 +36,18 @@
                 </span>
                 <span>Aditya Bhadauriya</span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
@@ -60,12 +60,11 @@
                     <span>Available for Work</span>
                 </div>
                 <h1 class="hero-title">
-                    Python AI & Platform <span class="gradient-text">Engineer</span><br>
+                    Python AI & Backend <span class="gradient-text">Engineer</span><br>
                     Building <span class="gradient-text">Scalable Systems</span>
                 </h1>
                 <p class="hero-subtitle">
-                    4+ years of experience building cloud-native applications, microservices, and enterprise solutions.
-                    Specializing in RAG, MCP, containerization, Kubernetes orchestration, CI/CD automation, and modern backend architectures.
+                    I build Python backends and AI applications that turn documents into cited answers. My work covers retrieval, evaluation, asynchronous processing, and deployment on AWS.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">
@@ -80,15 +79,11 @@
                 <div class="hero-stats">
                     <div class="stat">
                         <h3>4+</h3>
-                        <p>Years Experience</p>
+                        <p>Years building software</p>
                     </div>
                     <div class="stat">
-                        <h3>15+</h3>
-                        <p>Projects Delivered</p>
-                    </div>
-                    <div class="stat">
-                        <h3>10+</h3>
-                        <p>Technologies</p>
+                        <h3>0.90</h3>
+                        <p>RAGAS faithfulness</p>
                     </div>
                 </div>
             </div>
@@ -100,17 +95,275 @@
                         <div class="code-dot"></div>
                     </div>
                     <div class="code-content">
-                        <p><span class="code-keyword">from</span> devops <span class="code-keyword">import</span> Aditya</p>
-                        <p><span class="code-keyword">class</span> <span class="code-class">Developer</span>:</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;skills = [<span class="code-string">"Docker"</span>, <span class="code-string">"K8s"</span>, <span class="code-string">"FastAPI"</span>, <span class="code-string">"AWS"</span>, <span class="code-string">"RAG"</span>, <span class="code-string">"MCP"</span>]</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;passion = <span class="code-string">"Building Solutions"</span></p>
+                        <p><span class="code-keyword">POST</span> <span class="code-class">/ask</span></p>
+                        <p>{ <span class="code-string">"question"</span>: <span class="code-string">"..."</span> }</p>
+                        <p><span class="code-keyword">200 OK</span></p>
+                        <p>{ <span class="code-string">"answer"</span>: <span class="code-string">"..."</span>,</p>
+                        <p>&nbsp;&nbsp;<span class="code-string">"sources"</span>: [{ <span class="code-string">"page"</span>: 4 }] }</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Selected work across AI applications, backend systems, and cloud infrastructure</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Academic Intelligence Platform</h3>
+                        <span class="project-type">Multi-tenant RAG Platform & AWS Infrastructure</span>
+                    </div>
+                    <p class="project-description">
+                            A multi-tenant RAG platform that answers questions over academic PDFs with page-level citations and can route queries to web search.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/Academic-Intelligence-Platform" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fab fa-github"></i>
+                            <span>Application Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/academic-intelligence-platform-terraform" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Terraform Repo</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Python 3.14</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">AWS Bedrock</span>
+                        <span class="tech">Strands</span>
+                        <span class="tech">MCP</span>
+                        <span class="tech">pgvector</span>
+                        <span class="tech">S3</span>
+                        <span class="tech">SQS</span>
+                        <span class="tech">ECS Fargate</span>
+                        <span class="tech">Terraform</span>
+                        <span class="tech">RAGAS</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Hybrid pgvector and PostgreSQL full-text retrieval with page-aware citations</li>
+                            <li><i class="fas fa-check"></i> RAGAS evaluation gates nightly CI; faithfulness 0.90 and context precision 0.98</li>
+                            <li><i class="fas fa-check"></i> Tenant-isolated access and asynchronous SQS/ECS document ingestion</li>
+                        </ul>
+                    </div>
+                    <details class="project-section project-details">
+                        <summary><i class="fas fa-building"></i> Architecture & implementation</summary>
+                        <p class="project-architecture">
+                            ECS Fargate hosts separate UI, API, and worker services behind an HTTPS ALB.
+                            S3 and SQS handle document ingestion, RDS PostgreSQL with pgvector stores embeddings,
+                            and Terraform provisions the AWS networking, compute, database, identity, and CI/CD infrastructure.
+                        </p>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/Academic-Intelligence-Platform" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>App</span>
+                        </a>
+                        <a href="https://github.com/MP-30/academic-intelligence-platform-terraform" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i>
+                            <span>IaC</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Hyper-Scale-Ops</h3>
+                        <span class="project-type">DevOps Platform & Infrastructure</span>
+                    </div>
+                    <p class="project-description">
+                            A delivery platform for a containerized web application, built to demonstrate repeatable Kubernetes releases and production operations.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/hyper-scale-ops" target="_blank" class="meta-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>GitHub</span>
+                        </a>
+
+                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" target="_blank" class="meta-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentation</span>
+                        </a>
+
+                        <a href="https://app.notion.com/p/Design-Document-for-Hyper-3a3b5df6bb2e801ebc78c1281d220170?source=copy_link" target="_blank" class="meta-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Design Document</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Docker</span>
+                        <span class="tech">Kubernetes</span>
+                        <span class="tech">Jenkins</span>
+                        <span class="tech">GitHub Actions</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">Python</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Kubernetes and Helm deployments with NGINX Ingress and TLS</li>
+                            <li><i class="fas fa-check"></i> GitHub Actions CI/CD and Terraform-managed infrastructure</li>
+                            <li><i class="fas fa-check"></i> Zero-downtime rolling releases with Datadog monitoring</li>
+                        </ul>
+                    </div>
+                    <details class="project-section project-details">
+                        <summary><i class="fas fa-building"></i> Architecture & implementation</summary>
+                        <p class="project-architecture">Microservices architecture with containerized applications, load balancing, auto-scaling, centralized logging, and observability stack</p>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/hyper-scale-ops" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>Repo</span>
+                        </a>
+                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book"></i>
+                            <span>Docs</span>
+                        </a>
+                        <a href="https://app.notion.com/p/Design-Document-for-Hyper-3a3b5df6bb2e801ebc78c1281d220170?source=copy_link" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Design</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>AI-Assisted Linux Debugging</h3>
+                        <span class="project-type">AIOps & Local RAG Debug Assistant</span>
+                    </div>
+                    <p class="project-description">
+                            A Linux debugging assistant that collects system diagnostics and combines them with retrieved runbooks to generate local-LLM troubleshooting guidance.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fab fa-github"></i>
+                            <span>Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Docs</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Python 3.12+</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">ChromaDB</span>
+                        <span class="tech">RAG</span>
+                        <span class="tech">LM Studio</span>
+                        <span class="tech">Prometheus</span>
+                        <span class="tech">Linux</span>
+                        <span class="tech">systemd</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Collects Linux metrics, Docker stats, logs, processes, and network diagnostics</li>
+                            <li><i class="fas fa-check"></i> Retrieves relevant troubleshooting runbooks with ChromaDB</li>
+                            <li><i class="fas fa-check"></i> Sends structured context to a local LLM and parses remediation guidance</li>
+                        </ul>
+                    </div>
+                    <details class="project-section project-details">
+                        <summary><i class="fas fa-building"></i> Architecture & implementation</summary>
+                        <p class="project-architecture">
+                            System collectors build a single health snapshot and classify recent journal errors.
+                            ChromaDB retrieves the closest troubleshooting runbooks, then LM Studio combines
+                            those runbooks with the snapshot to generate root-cause analysis and fix commands.
+                        </p>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book"></i>
+                            <span>Docs</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-file-import"></i>
+                        </div>
+                        <h3>Distributed Document Processing Platform</h3>
+                        <span class="project-type">Asynchronous PDF OCR Pipeline</span>
+                    </div>
+                    <p class="project-description">
+                            An asynchronous PDF processing service that queues OCR jobs, tracks their progress, and returns extracted text and failure status through an API.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform#readme" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Python 3.14</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">Celery</span>
+                        <span class="tech">Redis</span>
+                        <span class="tech">PostgreSQL 17</span>
+                        <span class="tech">SQLAlchemy</span>
+                        <span class="tech">Docker Compose</span>
+                        <span class="tech">Pydantic</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> FastAPI accepts PDF uploads and queues work for Celery workers through Redis</li>
+                            <li><i class="fas fa-check"></i> Exponential-backoff retries for transient OCR failures</li>
+                            <li><i class="fas fa-check"></i> PostgreSQL stores documents, extracted text, status, and retry errors</li>
+                        </ul>
+                    </div>
+                    <details class="project-section project-details">
+                        <summary><i class="fas fa-building"></i> Architecture & implementation</summary>
+                        <p class="project-architecture">
+                            FastAPI validates uploads and persists document metadata and content in PostgreSQL,
+                            then Redis queues the processing job for a Celery worker. Workers update processing
+                            state, retry transient OCR failures, and persist extracted text or the final error.
+                        </p>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform#readme" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book"></i>
+                            <span>Docs</span>
+                        </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+    </section>
+
+<!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
             <div class="section-header">
@@ -120,14 +373,10 @@
             <div class="about-grid">
                 <div class="about-content">
                     <p class="about-text lead">
-                        I'm a Python AI and Platform Engineer passionate about building scalable, reliable, and efficient systems.
-                        With 4+ years of hands-on experience, I've helped businesses transform their infrastructure and deploy
-                        robust applications in production environments.
+                        I build Python backends and AI applications that turn documents into cited answers.
                     </p>
                     <p class="about-text">
-                        My expertise spans from RAG, MCP, containerization and orchestration to microservices architecture and CI/CD automation.
-                        I believe in writing clean, maintainable code and building systems that are not just functional but also scalable, 
-                        secure, and observable.
+                        From retrieval and evaluation to asynchronous processing and AWS deployment, I focus on building useful systems that are measurable and ready for production.
                     </p>
                     <div class="about-highlights">
                         <div class="highlight-item">
@@ -152,8 +401,8 @@
                     <div class="card-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Full-Stack DevOps</h3>
-                    <p>From development to deployment, I handle every aspect of building and maintaining scalable systems.</p>
+                    <h3>From API to Production</h3>
+                    <p>I build and operate Python services and AI applications, from backend design through cloud deployment.</p>
                 </div>
             </div>
         </div>
@@ -262,44 +511,49 @@
                 <h2>Professional Journey</h2>
                 <p>Experience building innovative solutions across different domains</p>
             </div>
-            
+
             <div class="experience-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="experience-header">
-                            <h3>Freelance Software Engineer</h3>
+                            <h3>Independent Software Engineer (Contract)</h3>
                             <span class="date"><i class="fas fa-calendar"></i> Jan 2025 – Present</span>
                         </div>
 
                         <div class="experience-project">
-                            <h4><i class="fas fa-project-diagram"></i> Tensteps Technologies</h4>
-                            <p class="tech-stack">FastAPI • PostgreSQL • OpenTelemetry • Docker</p>
+                            <h4><i class="fas fa-project-diagram"></i> Klarititec — Health-sector Document Chatbot & AI Pipeline</h4>
+                            <p class="tech-stack">Pydantic AI • AWS Bedrock • pgvector • S3 • SQS • Lambda • Terraform</p>
                             <ul class="responsibilities">
-                                <li>Developed FastAPI microservices using PostgreSQL, Pydantic, and Jinja2 for clients.</li>
-                                <li>Built Jenkins and GitHub Actions CI/CD pipelines to deploy Docker applications on AWS ECS and DigitalOcean.</li>
-                                <li>Implemented OpenTelemetry, Datadog, Prometheus, Grafana, and Okta SAML SSO to enhance observability, monitoring, and application security.</li>
+                                <li>Built a medical-policy chatbot with contextual retrieval using Pydantic AI, Bedrock, and pgvector; stored conversation history in PostgreSQL JSONB.</li>
+                                <li>Designed consent-validated document processing with presigned S3 uploads, SQS, Lambda, and Bedrock summarization; provisioned WAF and CloudWatch dashboards with Terraform.</li>
                             </ul>
                         </div>
 
                         <div class="experience-project">
-                            <h4><i class="fas fa-project-diagram"></i> Trade360</h4>
-                            <p class="tech-stack">FastAPI • PostgreSQL • Docker • Pydantic • Python</p>
+                            <h4><i class="fas fa-project-diagram"></i> Trade360 AI — Trade Execution Platform</h4>
+                            <p class="tech-stack">FastAPI • Angel One APIs • AWS EKS • Terraform • ArgoCD • Datadog</p>
                             <ul class="responsibilities">
-                                <li>Developed backend APIs using FastAPI and PostgreSQL</li>
-                                <li>Designed modular service architecture for scalability and maintainability</li>
-                                <li>Containerized applications using Docker</li>
-                                <li>Improved API performance and reliability</li>
+                                <li>Built 5+ production FastAPI microservices integrating Angel One broker APIs for real-time market data, order execution, and token authentication.</li>
+                                <li>Automated multi-environment EKS deployments with Terraform, ArgoCD, and GitHub Actions; added Datadog APM tracing.</li>
                             </ul>
                         </div>
 
                         <div class="experience-project">
-                            <h4><i class="fas fa-project-diagram"></i> Ocilix ERP Solution</h4>
-                            <p class="tech-stack">Frappe Framework • ERPNext • MariaDB • Python</p>
+                            <h4><i class="fas fa-project-diagram"></i> Tensteps Technologies — Python SDK & GRC AI</h4>
+                            <p class="tech-stack">Python • FastAPI • Gemini API • GraphDB • AWS EKS • OpenTelemetry</p>
                             <ul class="responsibilities">
-                                <li>Developed and customized ERP modules using Frappe Framework</li>
-                                <li>Implemented workflow automation and business process customization</li>
-                                <li>Performed database optimization and maintenance</li>
+                                <li>Authored an internal Python SDK for shared request validation, error handling, logging, and OpenTelemetry tracing.</li>
+                                <li>Built banking GRC RAG and reporting services, and migrated workloads to EKS with Terraform, SonarQube, and Trivy CI gates.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-project">
+                            <h4><i class="fas fa-project-diagram"></i> AIC-Prestige & Oscillix</h4>
+                            <p class="tech-stack">Okta SAML SSO • Subscription Management • Frappe • ERPNext • Docker • AWS Lightsail</p>
+                            <ul class="responsibilities">
+                                <li>Implemented enterprise SSO and subscription-management backend services for AIC-Prestige.</li>
+                                <li>Customized Frappe/ERPNext modules in Python and deployed them with Docker on AWS Lightsail for Oscillix.</li>
                             </ul>
                         </div>
                     </div>
@@ -312,13 +566,13 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="experience-header">
-                            <h3>M-Ideas Global Consulting</h3>
+                            <h3>Software Developer — M-Ideas</h3>
                             <span class="date"><i class="fas fa-calendar"></i> May 2024 – Jan 2025</span>
                         </div>
                         <ul class="responsibilities">
-                            <li>Led development of Django-based task management software</li>
-                            <li>Developed company website and client-facing portals</li>
-                            <li>Maintained Reliance Nippon Life Insurance web applications</li>
+                            <li>Built the Django backend for a task and file-management platform on AWS RDS, S3, and Lambda.</li>
+                            <li>Decoupled background jobs and real-time notifications with SQS and SNS; containerized services for Kubernetes deployment.</li>
+                            <li>Added Datadog tracing and custom metrics to investigate production bottlenecks.</li>
                         </ul>
                     </div>
                 </div>
@@ -327,7 +581,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="experience-header">
-                            <h3>Innovior Advisory Private Limited</h3>
+                            <h3>Software Developer — Money Bloom</h3>
                             <span class="date"><i class="fas fa-calendar"></i> Oct 2022 – Apr 2024</span>
                         </div>
 
@@ -335,9 +589,9 @@
                             <h4><i class="fas fa-project-diagram"></i> Multiple Projects</h4>
                             <p class="tech-stack">Django • Frappe • PostgreSQL • ERP Solutions</p>
                             <ul class="responsibilities">
-                                <li><strong>Bluechip:</strong> Reporting modules with optimized PostgreSQL queries</li>
-                                <li><strong>Alufluoride ERP:</strong> ERP solutions and ERPNext customization</li>
-                                <li><strong>Reverse Auction Platform:</strong> Real-time bidding and auction workflows</li>
+                                <li>Built a Django reporting engine for Bluechip India, processing financial data asynchronously with Celery and Redis.</li>
+                                <li>Extended Frappe/ERPNext workflows in Python for Alufluoride Ltd.</li>
+                                <li>Set up Jenkins CI/CD to production Kubernetes with Prometheus and Grafana alerting.</li>
                             </ul>
                         </div>
                     </div>
@@ -345,360 +599,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Showcase of my most impactful work and innovations</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Academic Intelligence Platform</h3>
-                        <span class="project-type">Production RAG Platform & AWS Infrastructure</span>
-                    </div>
-                    <p class="project-description">
-                        A production RAG platform that answers questions over academic PDFs with exact page citations.
-                        It combines private document retrieval and live web search, routes tools through MCP, and runs nightly
-                        RAGAS quality evaluations with historical answer-quality baselines.
-                    </p>
-                    <div class="project-meta">
-                        <a href="https://ai.adityalive.tech" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Live Platform</span>
-                        </a>
-                        <a href="https://github.com/MP-30/Academic-Intelligence-Platform" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fab fa-github"></i>
-                            <span>Application Repo</span>
-                        </a>
-                        <a href="https://github.com/MP-30/academic-intelligence-platform-terraform" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fas fa-code"></i>
-                            <span>Terraform Repo</span>
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech">Python 3.14</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">AWS Bedrock</span>
-                        <span class="tech">Strands</span>
-                        <span class="tech">MCP</span>
-                        <span class="tech">pgvector</span>
-                        <span class="tech">S3</span>
-                        <span class="tech">SQS</span>
-                        <span class="tech">ECS Fargate</span>
-                        <span class="tech">Terraform</span>
-                        <span class="tech">RAGAS</span>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i> Page-aware PDF ingestion with Bedrock Titan embeddings</li>
-                            <li><i class="fas fa-check"></i> Hybrid vector and full-text retrieval with cited answers</li>
-                            <li><i class="fas fa-check"></i> Agent routing between document and live web MCP tools</li>
-                            <li><i class="fas fa-check"></i> Cognito authentication and rolling conversation summaries</li>
-                            <li><i class="fas fa-check"></i> Nightly RAGAS evaluations with quality threshold checks</li>
-                        </ul>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-building"></i> Architecture</h4>
-                        <p class="project-architecture">
-                            ECS Fargate hosts separate UI, API, and worker services behind an HTTPS ALB.
-                            S3 and SQS handle document ingestion, RDS PostgreSQL with pgvector stores embeddings,
-                            and Terraform provisions the AWS networking, compute, database, identity, and CI/CD infrastructure.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/MP-30/Academic-Intelligence-Platform" class="project-link primary" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                            <span>Application</span>
-                        </a>
-                        <a href="https://github.com/MP-30/academic-intelligence-platform-terraform" class="project-link secondary" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-code"></i>
-                            <span>Infrastructure</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Hyper-Scale-Ops</h3>
-                        <span class="project-type">DevOps Platform & Infrastructure</span>
-                    </div>
-                    <p class="project-description">
-                        A comprehensive DevOps platform demonstrating enterprise-grade infrastructure practices. Showcases containerization, 
-                        orchestration, CI/CD automation, and cloud-native deployment strategies.
-                    </p>
-                    <div class="project-meta">
-                        <a href="https://github.com/MP-30/hyper-scale-ops" target="_blank" class="meta-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>GitHub</span>
-                        </a>
-
-                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" target="_blank" class="meta-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Documentation</span>
-                        </a>
-
-                        <a href="https://app.notion.com/p/Design-Document-for-Hyper-3a3b5df6bb2e801ebc78c1281d220170?source=copy_link" target="_blank" class="meta-item">
-                            <i class="fas fa-sitemap"></i>
-                            <span>Design Document</span>
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech">Docker</span>
-                        <span class="tech">Kubernetes</span>
-                        <span class="tech">Jenkins</span>
-                        <span class="tech">GitHub Actions</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">Python</span>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i> Docker containerization and image optimization</li>
-                            <li><i class="fas fa-check"></i> Kubernetes deployment and orchestration</li>
-                            <li><i class="fas fa-check"></i> CI/CD pipelines with Jenkins & GitHub Actions</li>
-                            <li><i class="fas fa-check"></i> Rolling updates and rollback strategies</li>
-                            <li><i class="fas fa-check"></i> Service discovery and networking</li>
-                        </ul>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-building"></i> Architecture</h4>
-                        <p class="project-architecture">Microservices architecture with containerized applications, load balancing, auto-scaling, centralized logging, and observability stack</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/MP-30/hyper-scale-ops" class="project-link primary" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" class="project-link secondary" target="_blank">
-                            <i class="fas fa-book"></i>
-                            <span>Documentation</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-terminal"></i>
-                        </div>
-                        <h3>AI-Assisted Linux Debugging</h3>
-                        <span class="project-type">AIOps & Local RAG Debug Assistant</span>
-                    </div>
-                    <p class="project-description">
-                        An AI-assisted Linux troubleshooting platform that collects live system health data,
-                        triages journal logs, retrieves relevant runbooks from ChromaDB, and sends the context
-                        to a local LLM for root-cause analysis and remediation steps.
-                    </p>
-                    <div class="project-meta">
-                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Documentation</span>
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech">Python 3.12+</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">ChromaDB</span>
-                        <span class="tech">RAG</span>
-                        <span class="tech">LM Studio</span>
-                        <span class="tech">Prometheus</span>
-                        <span class="tech">Linux</span>
-                        <span class="tech">systemd</span>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i> Live CPU, memory, disk, network, process, Docker, and journal log collection</li>
-                            <li><i class="fas fa-check"></i> Automated log classification with actionable issue and suggested-action detection</li>
-                            <li><i class="fas fa-check"></i> ChromaDB runbook retrieval for context-aware Linux troubleshooting</li>
-                            <li><i class="fas fa-check"></i> Local LLM analysis through an OpenAI-compatible LM Studio endpoint</li>
-                            <li><i class="fas fa-check"></i> FastAPI endpoints, CLI commands, and Prometheus system metrics</li>
-                        </ul>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-building"></i> Architecture</h4>
-                        <p class="project-architecture">
-                            System collectors build a single health snapshot and classify recent journal errors.
-                            ChromaDB retrieves the closest troubleshooting runbooks, then LM Studio combines
-                            those runbooks with the snapshot to generate root-cause analysis and fix commands.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" class="project-link primary" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" class="project-link secondary" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-book"></i>
-                            <span>Documentation</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-file-import"></i>
-                        </div>
-                        <h3>Distributed Document Processing Platform</h3>
-                        <span class="project-type">Asynchronous PDF OCR Pipeline</span>
-                    </div>
-                    <p class="project-description">
-                        A production-shaped document processing platform that ingests PDF uploads through
-                        FastAPI, queues OCR jobs with Celery and Redis, stores documents and results in
-                        PostgreSQL, and exposes status, retry, and extracted-text APIs.
-                    </p>
-                    <div class="project-meta">
-                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform#readme" target="_blank" rel="noopener noreferrer" class="meta-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Documentation</span>
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech">Python 3.14</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">Celery</span>
-                        <span class="tech">Redis</span>
-                        <span class="tech">PostgreSQL 17</span>
-                        <span class="tech">SQLAlchemy</span>
-                        <span class="tech">Docker Compose</span>
-                        <span class="tech">Pydantic</span>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i> PDF upload API with immediate 202 Accepted responses</li>
-                            <li><i class="fas fa-check"></i> Asynchronous Celery workers with Redis task brokerage</li>
-                            <li><i class="fas fa-check"></i> Exponential-backoff retries for transient OCR failures</li>
-                            <li><i class="fas fa-check"></i> Document status tracking across queued, processing, completed, and failed states</li>
-                            <li><i class="fas fa-check"></i> PostgreSQL persistence for PDF content, OCR output, retries, and errors</li>
-                        </ul>
-                    </div>
-                    <div class="project-section">
-                        <h4><i class="fas fa-building"></i> Architecture</h4>
-                        <p class="project-architecture">
-                            FastAPI validates uploads and persists document metadata and content in PostgreSQL,
-                            then Redis queues the processing job for a Celery worker. Workers update processing
-                            state, retry transient OCR failures, and persist extracted text or the final error.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform" class="project-link primary" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://github.com/MP-30/Distributed-Document-Processing-Platform#readme" class="project-link secondary" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-book"></i>
-                            <span>Documentation</span>
-                        </a>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-    </section>
-
-<!--    &lt;!&ndash;- Freelancing Section &ndash;&gt;-->
-<!--        <section id="projects" class="section projects">-->
-<!--        <div class="container">-->
-<!--            <div class="section-header">-->
-<!--                <h2>Freelancing</h2>-->
-<!--                <p>Showcase of my most freelancing works</p>-->
-<!--            </div>-->
-
-<!--            <div class="projects-grid">-->
-
-
-<!--                <div class="project-card">-->
-<!--                    <div class="project-header">-->
-<!--                        <div class="project-icon">-->
-<!--                            <i class="fas fa-cubes"></i>-->
-<!--                        </div>-->
-<!--                        <h3>Trade360</h3>-->
-<!--                        <span class="project-type">FastAPI Backend Service</span>-->
-<!--                    </div>-->
-<!--                    <p class="project-description">-->
-<!--                        Modern backend service for trading platform with modular architecture, robust validation, and high performance.-->
-<!--                    </p>-->
-<!--                    <div class="project-tech">-->
-<!--                        <span class="tech">FastAPI</span>-->
-<!--                        <span class="tech">PostgreSQL</span>-->
-<!--                        <span class="tech">Docker</span>-->
-<!--                        <span class="tech">Pydantic</span>-->
-<!--                    </div>-->
-<!--                    <div class="project-section">-->
-<!--                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>-->
-<!--                        <ul class="project-features">-->
-<!--                            <li><i class="fas fa-check"></i> Backend API development with FastAPI</li>-->
-<!--                            <li><i class="fas fa-check"></i> Modular service architecture design</li>-->
-<!--                            <li><i class="fas fa-check"></i> Database optimization and migrations</li>-->
-<!--                            <li><i class="fas fa-check"></i> Docker containerization</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="project-links">-->
-<!--                        <a href="#" class="project-link secondary" target="_blank">-->
-<!--                            <i class="fas fa-book"></i>-->
-<!--                            <span>Project Details</span>-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="project-card">-->
-<!--                    <div class="project-header">-->
-<!--                        <div class="project-icon">-->
-<!--                            <i class="fas fa-boxes"></i>-->
-<!--                        </div>-->
-<!--                        <h3>Ocilix ERP</h3>-->
-<!--                        <span class="project-type">Enterprise Resource Planning</span>-->
-<!--                    </div>-->
-<!--                    <p class="project-description">-->
-<!--                        Comprehensive ERP solution with workflow automation, business process customization, and enterprise-grade database management.-->
-<!--                    </p>-->
-<!--                    <div class="project-tech">-->
-<!--                        <span class="tech">Frappe</span>-->
-<!--                        <span class="tech">ERPNext</span>-->
-<!--                        <span class="tech">MariaDB</span>-->
-<!--                        <span class="tech">Python</span>-->
-<!--                    </div>-->
-<!--                    <div class="project-section">-->
-<!--                        <h4><i class="fas fa-tasks"></i> Responsibilities</h4>-->
-<!--                        <ul class="project-features">-->
-<!--                            <li><i class="fas fa-check"></i> ERP module development and customization</li>-->
-<!--                            <li><i class="fas fa-check"></i> Workflow automation implementation</li>-->
-<!--                            <li><i class="fas fa-check"></i> Database optimization</li>-->
-<!--                            <li><i class="fas fa-check"></i> Production deployment and support</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="project-links">-->
-<!--                        <a href="#" class="project-link secondary" target="_blank">-->
-<!--                            <i class="fas fa-book"></i>-->
-<!--                            <span>Project Details</span>-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">

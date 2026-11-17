@@ -2,10 +2,18 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-if (hamburger) {
+function setNavigationOpen(isOpen) {
+    if (!hamburger || !navMenu) return;
+
+    navMenu.classList.toggle('active', isOpen);
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+}
+
+if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+        setNavigationOpen(hamburger.getAttribute('aria-expanded') !== 'true');
     });
 }
 
@@ -13,9 +21,15 @@ if (hamburger) {
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+        setNavigationOpen(false);
     });
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && hamburger?.getAttribute('aria-expanded') === 'true') {
+        setNavigationOpen(false);
+        hamburger.focus();
+    }
 });
 
 // ===== SMOOTH SCROLL BEHAVIOR =====
