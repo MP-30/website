@@ -488,6 +488,69 @@
                     </div>
                 </div>
 
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>AI-Assisted Linux Debugging</h3>
+                        <span class="project-type">AIOps & Local RAG Debug Assistant</span>
+                    </div>
+                    <p class="project-description">
+                        An AI-assisted Linux troubleshooting platform that collects live system health data,
+                        triages journal logs, retrieves relevant runbooks from ChromaDB, and sends the context
+                        to a local LLM for root-cause analysis and remediation steps.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Python 3.12+</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">ChromaDB</span>
+                        <span class="tech">RAG</span>
+                        <span class="tech">LM Studio</span>
+                        <span class="tech">Prometheus</span>
+                        <span class="tech">Linux</span>
+                        <span class="tech">systemd</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Live CPU, memory, disk, network, process, Docker, and journal log collection</li>
+                            <li><i class="fas fa-check"></i> Automated log classification with actionable issue and suggested-action detection</li>
+                            <li><i class="fas fa-check"></i> ChromaDB runbook retrieval for context-aware Linux troubleshooting</li>
+                            <li><i class="fas fa-check"></i> Local LLM analysis through an OpenAI-compatible LM Studio endpoint</li>
+                            <li><i class="fas fa-check"></i> FastAPI endpoints, CLI commands, and Prometheus system metrics</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-building"></i> Architecture</h4>
+                        <p class="project-architecture">
+                            System collectors build a single health snapshot and classify recent journal errors.
+                            ChromaDB retrieves the closest troubleshooting runbooks, then LM Studio combines
+                            those runbooks with the snapshot to generate root-cause analysis and fix commands.
+                        </p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/AI-assisted-Linux-debugging#readme" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                </div>
+
                 </div>
             </div>
     </section>
