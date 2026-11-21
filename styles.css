@@ -13,6 +13,8 @@
     --card-bg: #1e293b;
     --accent-rgb: 132, 204, 22;
     --secondary-rgb: 250, 204, 21;
+    --glass-bg: rgba(30, 41, 59, 0.68);
+    --glass-border: rgba(255, 255, 255, 0.12);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -32,10 +34,35 @@ html {
     scroll-behavior: smooth;
 }
 
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    transform: translateY(-160%);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-primary);
-    background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+    background:
+        radial-gradient(ellipse at 12% 8%, rgba(var(--accent-rgb), 0.12), transparent 34rem),
+        radial-gradient(ellipse at 88% 24%, rgba(var(--secondary-rgb), 0.09), transparent 32rem),
+        radial-gradient(rgba(203, 213, 225, 0.1) 0.7px, transparent 0.8px),
+        linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+        linear-gradient(135deg, #0f172a 0%, #11182d 52%, #1a1f3a 100%);
+    background-size: auto, auto, 32px 32px, 72px 72px, 72px 72px, auto;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -47,7 +74,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.03), rgba(var(--secondary-rgb), 0.03));
+    background:
+        radial-gradient(ellipse at 16% 12%, rgba(var(--accent-rgb), 0.07), transparent 42%),
+        radial-gradient(ellipse at 82% 68%, rgba(var(--secondary-rgb), 0.045), transparent 40%);
     z-index: -1;
     pointer-events: none;
 }
@@ -55,34 +84,34 @@ body {
 .blob {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), 0.15), transparent);
-    filter: blur(40px);
+    background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), 0.22), transparent 72%);
+    filter: blur(64px);
     animation: float 8s ease-in-out infinite;
 }
 
 .blob-1 {
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     top: -50px;
     right: -100px;
     animation-delay: 0s;
 }
 
 .blob-2 {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     bottom: 50px;
     left: 50px;
-    background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), 0.1), transparent);
+    background: radial-gradient(circle at 30% 30%, rgba(var(--secondary-rgb), 0.18), transparent 72%);
     animation-delay: 2s;
 }
 
 .blob-3 {
-    width: 250px;
-    height: 250px;
+    width: 340px;
+    height: 340px;
     top: 50%;
     right: 10%;
-    background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), 0.1), transparent);
+    background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), 0.14), transparent 72%);
     animation-delay: 4s;
 }
 
@@ -90,6 +119,23 @@ body {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
     33% { transform: translate(30px, -50px) rotate(120deg); }
     66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blob,
+    .badge-dot {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
 }
 
 .stars {
@@ -201,6 +247,14 @@ p {
     color: var(--primary-color);
 }
 
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a.active::after {
+    width: 100%;
+}
+
 .nav-menu a:hover::after {
     width: 100%;
 }
@@ -233,7 +287,12 @@ p {
 .hamburger:focus-visible,
 .nav-menu a:focus-visible,
 .btn:focus-visible,
-.project-link:focus-visible {
+.project-link:focus-visible,
+.meta-item:focus-visible,
+.contact-link:focus-visible,
+.social-link:focus-visible,
+.project-details summary:focus-visible,
+.skip-link:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
 }
@@ -279,9 +338,21 @@ p {
     50% { opacity: 0.5; }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-title {
     font-size: 3.5rem;
     line-height: 1.2;
+    letter-spacing: -0.035em;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
 }
@@ -291,6 +362,7 @@ p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.8;
+    max-width: 58ch;
 }
 
 .hero-cta {
@@ -418,6 +490,7 @@ p {
 .section {
     padding: 100px 20px;
     position: relative;
+    scroll-margin-top: 5rem;
 }
 
 .section-header {
@@ -433,7 +506,7 @@ p {
 .section-header p {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 500px;
+    max-width: 58ch;
     margin: 0 auto;
 }
 
@@ -483,7 +556,7 @@ p {
 }
 
 .about-card {
-    background: linear-gradient(135deg, #1e293b, #293753);
+    background: var(--glass-bg);
     padding: 2.5rem;
     border-radius: 12px;
     color: white;
@@ -511,7 +584,7 @@ p {
 
 /* ===== SKILLS SECTION ===== */
 .skills {
-    background: linear-gradient(135deg, #0f172a, #1a1f3a);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.48), rgba(26, 31, 58, 0.34));
 }
 
 .notes-grid {
@@ -523,7 +596,7 @@ p {
 }
 
 .notes-category {
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(15, 23, 42, 0.72);
     border-radius: 18px;
     border: 1px solid rgba(var(--accent-rgb), 0.16);
     overflow: hidden;
@@ -682,7 +755,7 @@ p {
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
     background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-rgb), 0.05));
@@ -849,7 +922,7 @@ p {
 
 /* ===== PROJECTS SECTION ===== */
 .projects {
-    background: linear-gradient(135deg, #0f172a, #1a1f3a);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.48), rgba(26, 31, 58, 0.34));
 }
 
 .projects-grid {
@@ -859,8 +932,8 @@ p {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border-radius: 12px;
+    background: var(--glass-bg);
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
@@ -870,11 +943,29 @@ p {
     flex-direction: column;
 }
 
+.hero-code,
+.about-card,
+.notes-category,
+.skill-card,
+.timeline-content,
+.project-card {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-color: var(--glass-border);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.hero-code,
+.skill-card,
+.timeline-content {
+    background: var(--glass-bg);
+}
+
 .project-card.featured {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-rows: auto auto auto 1fr auto;
     gap: 0;
 }
 
@@ -887,7 +978,7 @@ p {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-2xl);
 }
 
@@ -912,7 +1003,7 @@ p {
 
 .project-card.featured .project-header {
     grid-column: 1;
-    grid-row: 1 / 5;
+    grid-row: 1 / 6;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -923,14 +1014,9 @@ p {
     grid-row: 1;
 }
 
-.project-card.featured > .project-meta {
-    grid-column: 2;
-    grid-row: 2;
-}
-
 .project-card.featured > .project-tech {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
 }
 
 .project-card.featured > .project-section {
@@ -938,16 +1024,16 @@ p {
 }
 
 .project-card.featured > .project-section:not(.project-details) {
-    grid-row: 2;
+    grid-row: 3;
 }
 
 .project-card.featured > .project-details {
-    grid-row: 3;
+    grid-row: 4;
 }
 
 .project-card.featured > .project-links {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 5;
 }
 
 .project-icon {
@@ -969,6 +1055,58 @@ p {
     font-weight: 600;
 }
 
+.project-visual {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.42);
+}
+
+.project-visual-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.visual-caption {
+    color: var(--primary-color);
+}
+
+.architecture-diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    color: var(--primary-color);
+}
+
+.architecture-connectors {
+    fill: none;
+    stroke: rgba(var(--accent-rgb), 0.6);
+    stroke-width: 1.5;
+    marker-end: url(#architecture-arrowhead);
+}
+
+.architecture-node rect {
+    fill: rgba(30, 41, 59, 0.88);
+    stroke: rgba(255, 255, 255, 0.16);
+    stroke-width: 1;
+}
+
+.architecture-node text {
+    fill: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .project-description {
     padding: 1.5rem 2rem;
     color: var(--text-secondary);
@@ -976,7 +1114,7 @@ p {
 }
 
 .project-tech {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
     padding: 0 2rem;

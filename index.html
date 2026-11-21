@@ -13,12 +13,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Bhadauriya | Python AI & Backend Engineer</title>
+    <meta name="description" content="Aditya Bhadauriya builds Python backends and document AI systems, from retrieval and evaluation to reliable AWS deployments.">
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="styles.css?v=20261117-3">
+    <link rel="stylesheet" href="styles.css?v=20261121-4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <!-- Animated Background -->
     <div class="stars"></div>
     <div class="animated-bg">
@@ -51,6 +54,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-container">
@@ -61,18 +65,18 @@
                 </div>
                 <h1 class="hero-title">
                     Python AI & Backend <span class="gradient-text">Engineer</span><br>
-                    Building <span class="gradient-text">Scalable Systems</span>
+                    Building <span class="gradient-text">Production-Ready Systems</span>
                 </h1>
                 <p class="hero-subtitle">
-                    I build Python backends and AI applications that turn documents into cited answers. My work covers retrieval, evaluation, asynchronous processing, and deployment on AWS.
+                    I build Python backends and document-AI products, from retrieval and evaluation to reliable AWS deployment.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">
-                        <span>View My Projects</span>
+                        <span>Explore Selected Work</span>
                         <i class="fas fa-code"></i>
                     </a>
                     <a href="assets/aditya_python_ai.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <span>Resume</span>
+                        <span>View Résumé</span>
                         <i class="fas fa-briefcase"></i>
                     </a>
                 </div>
@@ -83,7 +87,7 @@
                     </div>
                     <div class="stat">
                         <h3>0.90</h3>
-                        <p>RAGAS faithfulness</p>
+                        <p>RAGAS faithfulness<br>Academic Intelligence Platform</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +115,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Featured Projects</h2>
-                <p>Selected work across AI applications, backend systems, and cloud infrastructure</p>
+                <p>Production-minded systems, with their architecture, trade-offs, and evaluation made visible.</p>
             </div>
             
             <div class="projects-grid">
@@ -122,6 +126,44 @@
                         </div>
                         <h3>Academic Intelligence Platform</h3>
                         <span class="project-type">Multi-tenant RAG Platform & AWS Infrastructure</span>
+                        <div class="project-visual">
+                            <div class="project-visual-heading">
+                                <span>Architecture snapshot</span>
+                                <span class="visual-caption">AWS · RAG</span>
+                            </div>
+                            <svg class="architecture-diagram" viewBox="0 0 500 180" role="img" aria-labelledby="architecture-title architecture-description">
+                                <title id="architecture-title">Academic Intelligence Platform architecture</title>
+                                <desc id="architecture-description">Questions flow through an HTTPS load balancer to an API service and Bedrock with pgvector. PDF uploads flow through S3 and SQS to a worker service.</desc>
+                                <defs>
+                                    <marker id="architecture-arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                        <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"></path>
+                                    </marker>
+                                </defs>
+                                <g class="architecture-connectors" aria-hidden="true">
+                                    <path d="M112 48 H128 M232 48 H248 M352 48 H368"></path>
+                                    <path d="M112 132 H128 M232 132 H248 M352 132 H368"></path>
+                                </g>
+                                <g class="architecture-node">
+                                    <rect x="12" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="53" text-anchor="middle">Question</text>
+                                    <rect x="132" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="53" text-anchor="middle">HTTPS ALB</text>
+                                    <rect x="252" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="53" text-anchor="middle">API · ECS</text>
+                                    <rect x="372" y="27" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="53" text-anchor="middle">Bedrock + pgvector</text>
+
+                                    <rect x="12" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="137" text-anchor="middle">PDF upload</text>
+                                    <rect x="132" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="137" text-anchor="middle">S3</text>
+                                    <rect x="252" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="137" text-anchor="middle">SQS</text>
+                                    <rect x="372" y="111" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="137" text-anchor="middle">Worker · ECS</text>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     <p class="project-description">
                             A multi-tenant RAG platform that answers questions over academic PDFs with page-level citations and can route queries to web search.
@@ -140,14 +182,9 @@
                         <span class="tech">Python 3.14</span>
                         <span class="tech">FastAPI</span>
                         <span class="tech">AWS Bedrock</span>
-                        <span class="tech">Strands</span>
-                        <span class="tech">MCP</span>
                         <span class="tech">pgvector</span>
-                        <span class="tech">S3</span>
-                        <span class="tech">SQS</span>
                         <span class="tech">ECS Fargate</span>
                         <span class="tech">Terraform</span>
-                        <span class="tech">RAGAS</span>
                     </div>
                     <div class="project-section">
                         <h4><i class="fas fa-tasks"></i> Key Features</h4>
@@ -190,17 +227,17 @@
                             A delivery platform for a containerized web application, built to demonstrate repeatable Kubernetes releases and production operations.
                     </p>
                     <div class="project-meta">
-                        <a href="https://github.com/MP-30/hyper-scale-ops" target="_blank" class="meta-item">
+                        <a href="https://github.com/MP-30/hyper-scale-ops" target="_blank" rel="noopener noreferrer" class="meta-item">
                             <i class="fas fa-code-branch"></i>
                             <span>GitHub</span>
                         </a>
 
-                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" target="_blank" class="meta-item">
+                        <a href="https://app.notion.com/p/Hyper-Scale-Ops-36eb5df6bb2e8033bfb6fa364d04caaa?v=36eb5df6bb2e80d48773000cc028a80b&source=copy_link" target="_blank" rel="noopener noreferrer" class="meta-item">
                             <i class="fas fa-file-alt"></i>
                             <span>Documentation</span>
                         </a>
 
-                        <a href="https://app.notion.com/p/Design-Document-for-Hyper-3a3b5df6bb2e801ebc78c1281d220170?source=copy_link" target="_blank" class="meta-item">
+                        <a href="https://app.notion.com/p/Design-Document-for-Hyper-3a3b5df6bb2e801ebc78c1281d220170?source=copy_link" target="_blank" rel="noopener noreferrer" class="meta-item">
                             <i class="fas fa-sitemap"></i>
                             <span>Design Document</span>
                         </a>
@@ -266,11 +303,8 @@
                         <span class="tech">Python 3.12+</span>
                         <span class="tech">FastAPI</span>
                         <span class="tech">ChromaDB</span>
-                        <span class="tech">RAG</span>
                         <span class="tech">LM Studio</span>
                         <span class="tech">Prometheus</span>
-                        <span class="tech">Linux</span>
-                        <span class="tech">systemd</span>
                     </div>
                     <div class="project-section">
                         <h4><i class="fas fa-tasks"></i> Key Features</h4>
@@ -327,9 +361,6 @@
                         <span class="tech">Celery</span>
                         <span class="tech">Redis</span>
                         <span class="tech">PostgreSQL 17</span>
-                        <span class="tech">SQLAlchemy</span>
-                        <span class="tech">Docker Compose</span>
-                        <span class="tech">Pydantic</span>
                     </div>
                     <div class="project-section">
                         <h4><i class="fas fa-tasks"></i> Key Features</h4>
@@ -639,7 +670,7 @@
                     </div>
                     <h3>GitHub</h3>
                     <p>Explore my open source contributions</p>
-                    <a href="https://github.com/MP-30" class="contact-link" target="_blank">
+                    <a href="https://github.com/MP-30" class="contact-link" target="_blank" rel="noopener noreferrer">
                         github.com/MP-30
                         <i class="fas fa-external-link-alt"></i>
                     </a>
@@ -660,13 +691,13 @@
             <div class="social-section">
                 <p>Or connect with me on social media</p>
                 <div class="social-links">
-                    <a href="mailto:adityabhadauriya93@gmail.com" class="social-link" title="Email">
+                    <a href="mailto:adityabhadauriya93@gmail.com" class="social-link" title="Email" aria-label="Email Aditya">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://github.com/MP-30" class="social-link" title="GitHub">
+                    <a href="https://github.com/MP-30" class="social-link" title="GitHub" aria-label="Aditya on GitHub" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/aditya-bhadauriya-99bb8a86/" class="social-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/aditya-bhadauriya-99bb8a86/" class="social-link" title="LinkedIn" aria-label="Aditya on LinkedIn" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin"></i>
                     </a>
 
@@ -674,6 +705,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -682,6 +714,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261121-1"></script>
 </body>
 </html>
