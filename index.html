@@ -380,6 +380,42 @@
                         </div>
                         <h3>Distributed Document Processing Platform</h3>
                         <span class="project-type">Asynchronous PDF OCR Pipeline</span>
+                        <div class="project-visual">
+                            <div class="project-visual-heading">
+                                <span>Architecture snapshot</span>
+                                <span class="visual-caption">FastAPI · Celery · Redis</span>
+                            </div>
+                            <svg class="architecture-diagram" viewBox="0 0 500 200" role="img" aria-labelledby="document-processing-architecture-title document-processing-architecture-description">
+                                <title id="document-processing-architecture-title">Distributed Document Processing Platform architecture</title>
+                                <desc id="document-processing-architecture-description">Clients upload PDFs to FastAPI, which stores documents in PostgreSQL and queues jobs in Redis. Celery workers consume jobs, run OCR with retries, and save results and status back to PostgreSQL.</desc>
+                                <defs>
+                                    <marker id="document-processing-arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                        <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"></path>
+                                    </marker>
+                                </defs>
+                                <g class="document-processing-connectors" aria-hidden="true">
+                                    <path d="M112 43 H128 M232 43 H248 M352 43 H368"></path>
+                                    <path d="M182 65 V126"></path>
+                                    <path d="M430 65 V126"></path>
+                                    <path d="M390 65 C360 96 300 108 240 137"></path>
+                                </g>
+                                <g class="architecture-node">
+                                    <rect x="12" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="48" text-anchor="middle">Client · PDF</text>
+                                    <rect x="132" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="48" text-anchor="middle">FastAPI</text>
+                                    <rect x="252" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="48" text-anchor="middle">Redis · Queue</text>
+                                    <rect x="372" y="22" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="48" text-anchor="middle">Celery Worker</text>
+
+                                    <rect x="132" y="137" width="108" height="42" rx="9"></rect>
+                                    <text x="186" y="163" text-anchor="middle">PostgreSQL</text>
+                                    <rect x="372" y="137" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="163" text-anchor="middle">OCR · Retry</text>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     <p class="project-description">
                             An asynchronous PDF processing service that queues OCR jobs, tracks their progress, and returns extracted text and failure status through an API.
