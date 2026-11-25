@@ -15,7 +15,7 @@
     <title>Aditya Bhadauriya | Python AI & Backend Engineer</title>
     <meta name="description" content="Aditya Bhadauriya builds Python backends and document AI systems, from retrieval and evaluation to reliable AWS deployments.">
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="styles.css?v=20261121-4">
+    <link rel="stylesheet" href="styles.css?v=20261125-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 </head>
@@ -119,6 +119,105 @@
             </div>
             
             <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <h3>ClaimSense</h3>
+                        <span class="project-type">AI-Assisted Motor Insurance Claims Review</span>
+                        <div class="project-visual">
+                            <div class="project-visual-heading">
+                                <span>Architecture snapshot</span>
+                                <span class="visual-caption">LangGraph · Claims</span>
+                            </div>
+                            <svg class="architecture-diagram" viewBox="0 0 500 200" role="img" aria-labelledby="claimsense-architecture-title claimsense-architecture-description">
+                                <title id="claimsense-architecture-title">ClaimSense architecture</title>
+                                <desc id="claimsense-architecture-description">Claim PDFs enter through the Streamlit portal and are processed by a FastAPI and LangGraph workflow. An AI model checks extracted claim details against retrieved policy clauses. Python payout and routing rules use the recommendation, with claim records and audit checkpoints stored in PostgreSQL. Cases can be routed to adjuster or SIU review.</desc>
+                                <defs>
+                                    <marker id="claimsense-arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                        <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"></path>
+                                    </marker>
+                                </defs>
+                                <g class="claimsense-connectors" aria-hidden="true">
+                                    <path d="M112 43 H128 M232 43 H248 M352 43 H368"></path>
+                                    <path d="M302 65 V126"></path>
+                                    <path d="M430 65 V103 H82 V126"></path>
+                                    <path d="M152 158 H176 M320 158 H344"></path>
+                                </g>
+                                <g class="architecture-node">
+                                    <rect x="12" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="48" text-anchor="middle">Claim PDFs</text>
+                                    <rect x="132" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="48" text-anchor="middle">Streamlit UI</text>
+                                    <rect x="252" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="48" text-anchor="middle">LangGraph API</text>
+                                    <rect x="372" y="22" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="48" text-anchor="middle">LLM · Policies</text>
+
+                                    <rect x="12" y="137" width="140" height="42" rx="9"></rect>
+                                    <text x="82" y="163" text-anchor="middle">Payout · Routing</text>
+                                    <rect x="180" y="137" width="140" height="42" rx="9"></rect>
+                                    <text x="250" y="163" text-anchor="middle">PostgreSQL 18</text>
+                                    <rect x="348" y="137" width="140" height="42" rx="9"></rect>
+                                    <text x="418" y="163" text-anchor="middle">Adjuster · SIU</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An AI-assisted motor insurance claims system that extracts claim details, checks policy coverage, calculates payouts, and routes cases for the right level of review.
+                    </p>
+                    <div class="project-meta">
+                        <a href="https://github.com/MP-30/Claim-Sense" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/Claim-Sense/blob/main/Design.md" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>System Design</span>
+                        </a>
+                        <a href="https://github.com/MP-30/Claim-Sense/blob/main/evals/scorecards/2026-11-23.md" target="_blank" rel="noopener noreferrer" class="meta-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Evaluation</span>
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech">Python 3.14</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">LangGraph</span>
+                        <span class="tech">PostgreSQL 18</span>
+                        <span class="tech">Streamlit</span>
+                        <span class="tech">OpenAI</span>
+                    </div>
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Key Features</h4>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Extracts claim, surveyor, and optional police-report details and checks retrieved policy clauses</li>
+                            <li><i class="fas fa-check"></i> Calculates payouts and routes claims to automatic approval, adjuster review, or SIU; recommended rejections require a human decision</li>
+                            <li><i class="fas fa-check"></i> Reached 95% route and recommendation accuracy across 20 labelled synthetic claims</li>
+                        </ul>
+                    </div>
+                    <details class="project-section project-details">
+                        <summary><i class="fas fa-building"></i> Architecture & implementation</summary>
+                        <p class="project-architecture">
+                            A Streamlit reviewer portal calls a FastAPI service that runs the LangGraph claim workflow.
+                            Model-assisted extraction and policy retrieval feed deterministic Python payout and routing rules.
+                            PostgreSQL stores claim records, audit events, and workflow checkpoints so reviews can resume.
+                        </p>
+                    </details>
+                    <div class="project-links">
+                        <a href="https://github.com/MP-30/Claim-Sense" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>Repo</span>
+                        </a>
+                        <a href="https://github.com/MP-30/Claim-Sense/blob/main/Design.md" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Design</span>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="project-card featured">
                     <div class="project-header">
                         <div class="project-icon">
