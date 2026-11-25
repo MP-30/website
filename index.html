@@ -324,6 +324,42 @@
                         </div>
                         <h3>AI-Assisted Linux Debugging</h3>
                         <span class="project-type">AIOps & Local RAG Debug Assistant</span>
+                        <div class="project-visual">
+                            <div class="project-visual-heading">
+                                <span>Architecture snapshot</span>
+                                <span class="visual-caption">Linux · RAG · LLM</span>
+                            </div>
+                            <svg class="architecture-diagram" viewBox="0 0 500 200" role="img" aria-labelledby="linux-debug-architecture-title linux-debug-architecture-description">
+                                <title id="linux-debug-architecture-title">AI-Assisted Linux Debugging architecture</title>
+                                <desc id="linux-debug-architecture-description">Linux system diagnostics are collected by the FastAPI service into a health snapshot. ChromaDB retrieves relevant runbooks, and the runbooks plus snapshot are sent to LM Studio for troubleshooting analysis. The API returns summaries and debug guidance; Camber Cloud is an optional fallback if the local model fails.</desc>
+                                <defs>
+                                    <marker id="linux-debug-arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                        <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"></path>
+                                    </marker>
+                                </defs>
+                                <g class="linux-debug-connectors" aria-hidden="true">
+                                    <path d="M112 43 H128 M232 43 H248 M352 43 H368"></path>
+                                    <path d="M182 65 V126"></path>
+                                    <path d="M430 65 V126"></path>
+                                    <path d="M390 65 C360 96 300 108 240 137"></path>
+                                </g>
+                                <g class="architecture-node">
+                                    <rect x="12" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="48" text-anchor="middle">Linux Host</text>
+                                    <rect x="132" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="48" text-anchor="middle">FastAPI</text>
+                                    <rect x="252" y="22" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="48" text-anchor="middle">ChromaDB</text>
+                                    <rect x="372" y="22" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="48" text-anchor="middle">LM Studio</text>
+
+                                    <rect x="132" y="137" width="108" height="42" rx="9"></rect>
+                                    <text x="186" y="163" text-anchor="middle">API · User</text>
+                                    <rect x="372" y="137" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="163" text-anchor="middle">Camber · Fallback</text>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     <p class="project-description">
                             A Linux debugging assistant that collects system diagnostics and combines them with retrieved runbooks to generate local-LLM troubleshooting guidance.
