@@ -222,6 +222,45 @@
                         </div>
                         <h3>Hyper-Scale-Ops</h3>
                         <span class="project-type">DevOps Platform & Infrastructure</span>
+                        <div class="project-visual">
+                            <div class="project-visual-heading">
+                                <span>Architecture snapshot</span>
+                                <span class="visual-caption">CI/CD · Kubernetes</span>
+                            </div>
+                            <svg class="architecture-diagram" viewBox="0 0 500 180" role="img" aria-labelledby="hyper-scale-architecture-title hyper-scale-architecture-description">
+                                <title id="hyper-scale-architecture-title">Hyper Scale Ops architecture</title>
+                                <desc id="hyper-scale-architecture-description">GitHub Actions builds and tests the FastAPI application, pushes an image to Docker Hub, and deploys it through Helm to a Kubernetes cluster. The application uses PostgreSQL and reports telemetry to Datadog.</desc>
+                                <defs>
+                                    <marker id="hyper-scale-arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                                        <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"></path>
+                                    </marker>
+                                </defs>
+                                <g class="hyper-scale-connectors" aria-hidden="true">
+                                    <path d="M112 48 H128 M232 48 H248 M352 48 H368"></path>
+                                    <path d="M112 132 H128 M232 132 H248 M352 132 H368"></path>
+                                    <path d="M430 69 V111 M182 69 V111 M302 69 V111"></path>
+                                </g>
+                                <g class="architecture-node">
+                                    <rect x="12" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="53" text-anchor="middle">GitHub Actions</text>
+                                    <rect x="132" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="53" text-anchor="middle">Test · Build</text>
+                                    <rect x="252" y="27" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="53" text-anchor="middle">Docker Hub</text>
+                                    <rect x="372" y="27" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="53" text-anchor="middle">Helm · K8s</text>
+
+                                    <rect x="12" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="62" y="137" text-anchor="middle">GitHub</text>
+                                    <rect x="132" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="182" y="137" text-anchor="middle">FastAPI Pods</text>
+                                    <rect x="252" y="111" width="100" height="42" rx="9"></rect>
+                                    <text x="302" y="137" text-anchor="middle">PostgreSQL</text>
+                                    <rect x="372" y="111" width="116" height="42" rx="9"></rect>
+                                    <text x="430" y="137" text-anchor="middle">Datadog</text>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     <p class="project-description">
                             A delivery platform for a containerized web application, built to demonstrate repeatable Kubernetes releases and production operations.

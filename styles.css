@@ -1094,6 +1094,13 @@ p {
     marker-end: url(#architecture-arrowhead);
 }
 
+.hyper-scale-connectors {
+    fill: none;
+    stroke: rgba(var(--accent-rgb), 0.6);
+    stroke-width: 1.5;
+    marker-end: url(#hyper-scale-arrowhead);
+}
+
 .architecture-node rect {
     fill: rgba(30, 41, 59, 0.88);
     stroke: rgba(255, 255, 255, 0.16);
